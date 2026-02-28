@@ -1,0 +1,926 @@
+pytest
+============================= test session starts =============================
+platform win32 -- Python 3.12.2, pytest-7.1.3, pluggy-1.0.0 -- C:\Yandex\sprint3\django_sprint3\venv\Scripts\python.exe
+django: settings: blogicum.settings (from ini)
+rootdir: C:\Dev\django_sprint4\blogicum, configfile: pytest.ini, testpaths: tests/
+plugins: Faker-12.0.1, django-4.5.2
+collected 107 items
+
+tests/test_category_page_views.py::test_category_page <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py FAILED [  0%]
+tests/test_category_page_views.py::test_category_page_check_context_keys[title] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py FAILED [  1%]
+tests/test_category_page_views.py::test_category_page_check_context_keys[key1] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py FAILED [  2%]
+tests/test_category_page_views.py::test_category_page_check_context_keys[key2] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py FAILED [  3%]
+tests/test_category_page_views.py::test_category_page_check_context_keys[key3] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py FAILED [  4%]
+tests/test_category_page_views.py::test_category_page_category_unpublished <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py PASSED [  5%]
+tests/test_category_page_views.py::test_category_page_posts_unpublished <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py FAILED [  6%]
+tests/test_category_page_views.py::test_category_page_pub_date_later_today <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py FAILED [  7%]
+tests/test_category_page_views.py::test_category_page_posts_with_location <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py FAILED [  8%]
+tests/test_category_page_views.py::test_category_page_posts_with_unpublished_locations <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py FAILED [  9%]
+tests/test_category_page_views.py::test_many_posts_on_category_page <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py FAILED [ 10%]
+tests/test_category_page_views.py::test_no_other_posts_on_category_page <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py FAILED [ 11%]
+tests/test_content.py::TestContent::test_unpublished <- ..\tests\test_content.py
+ PASSED [ 12%]
+tests/test_content.py::TestContent::test_only_own_pubs_in_category <- ..\tests\test_content.py PASSED [ 13%]
+tests/test_content.py::TestContent::test_only_own_pubs_in_profile <- ..\tests\test_content.py PASSED [ 14%]
+tests/test_content.py::TestContent::test_unpublished_category <- ..\tests\test_content.py FAILED [ 14%]
+tests/test_content.py::TestContent::test_future_posts <- ..\tests\test_content.py PASSED [ 15%]
+tests/test_content.py::TestContent::test_pagination <- ..\tests\test_content.py PASSED [ 16%]
+tests/test_content.py::TestContent::test_image_visible <- ..\tests\test_content.py FAILED [ 17%]
+tests/test_err_pages.py::test_custom_err_handlers <- ..\tests\test_err_pages.py PASSED [ 18%]
+tests/test_pageapp_views.py::test_pageapp_views[about] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_pageapp_views.py PASSED [ 19%]
+tests/test_pageapp_views.py::test_pageapp_views[rules] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_pageapp_views.py PASSED [ 20%]
+tests/test_post_detail_views.py::test_posts_page_pk_published_location <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py PASSED [ 21%]
+tests/test_post_detail_views.py::test_posts_page_pk_unpublished_location <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py PASSED [ 22%]
+tests/test_post_detail_views.py::test_posts_page_pk_post_doesnt_exists <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py PASSED [ 23%]
+tests/test_post_detail_views.py::test_posts_page_pk_check_context_keys[title] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py PASSED [ 24%]
+tests/test_post_detail_views.py::test_posts_page_pk_check_context_keys[text] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py PASSED [ 25%]
+tests/test_post_detail_views.py::test_posts_page_pk_check_context_keys[key2] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py PASSED [ 26%]
+tests/test_post_detail_views.py::test_posts_page_pk_check_context_keys[key3] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py PASSED [ 27%]
+tests/test_post_detail_views.py::test_posts_page_pk_check_context_keys[key4] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py PASSED [ 28%]
+tests/test_post_detail_views.py::test_posts_page_pk_unpublished_post <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py FAILED [ 28%]
+tests/test_post_detail_views.py::test_posts_page_pk_pub_date_later_today <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py FAILED [ 29%]
+tests/test_post_detail_views.py::test_posts_page_pk_category_unpublished <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py FAILED [ 30%]
+tests/test_post_detail_views.py::test_posts_page_pk_post_with_published_location_and_category <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py PASSED [ 31%]
+tests/test_post_model.py::TestPostModelAttrs::test_model_attrs[title-CharField-params0] <- tests\conftest.py PASSED [ 32%]
+tests/test_post_model.py::TestPostModelAttrs::test_model_attrs[text-TextField-params1] <- tests\conftest.py PASSED [ 33%]
+tests/test_post_model.py::TestPostModelAttrs::test_model_attrs[pub_date-DateTimeField-params2] <- tests\conftest.py PASSED [ 34%]
+tests/test_post_model.py::TestPostModelAttrs::test_model_attrs[author-ForeignKey-params3] <- tests\conftest.py PASSED [ 35%]
+tests/test_post_model.py::TestPostModelAttrs::test_model_attrs[location-ForeignKey-params4] <- tests\conftest.py PASSED [ 36%]
+tests/test_post_model.py::TestPostModelAttrs::test_model_attrs[category-ForeignKey-params5] <- tests\conftest.py FAILED [ 37%]
+tests/test_post_model.py::TestPostModelAttrs::test_model_attrs[is_published-BooleanField-params6] <- tests\conftest.py PASSED [ 38%]
+tests/test_post_model.py::TestPostModelAttrs::test_model_attrs[created_at-DateTimeField-params7] <- tests\conftest.py PASSED [ 39%]
+tests/test_post_model.py::test_author_on_delete <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_model.py PASSED [ 40%]
+tests/test_post_model.py::test_location_on_delete <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_post_model.py PASSED [ 41%]
+tests/test_posts_page_views.py::test_all_unpublished <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py FAILED [ 42%]
+tests/test_posts_page_views.py::test_mixed_published <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py FAILED [ 42%]
+tests/test_posts_page_views.py::test_check_context_keys[title] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py FAILED [ 43%]
+tests/test_posts_page_views.py::test_check_context_keys[key1] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py FAILED [ 44%]
+tests/test_posts_page_views.py::test_check_context_keys[key2] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py FAILED [ 45%]
+tests/test_posts_page_views.py::test_check_context_keys[key3] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py FAILED [ 46%]
+tests/test_posts_page_views.py::test_category_unpublished <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py FAILED [ 47%]
+tests/test_posts_page_views.py::test_pub_date_later_today <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py FAILED [ 48%]
+tests/test_posts_page_views.py::test_posts_with_published_location <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py FAILED [ 49%]
+tests/test_posts_page_views.py::test_posts_with_unpublished_locations <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py FAILED [ 50%]
+tests/test_posts_page_views.py::test_many_posts_on_main_page <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py FAILED [ 51%]
+tests/test_users.py::test_custom_err_handlers <- ..\tests\test_users.py PASSED [ 52%]
+tests/test_users.py::test_profile <- ..\tests\test_users.py FAILED       [ 53%]
+tests/test_comment.py::test_comment_created_at <- ..\tests\test_comment.py PASSED [ 54%]
+tests/test_comment.py::test_comment <- ..\tests\test_comment.py FAILED   [ 55%]
+tests/test_comment.py::test_404_on_comment_deleted_post <- ..\tests\test_comment.py PASSED [ 56%]
+tests/test_post.py::test_post_created_at <- ..\tests\test_post.py PASSED [ 57%]
+tests/test_post.py::test_post <- ..\tests\test_post.py PASSED            [ 57%]
+tests/test_admin_page.py::test_admin_register <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_admin_page.py PASSED [ 58%]
+tests/test_category_model.py::TestCategoryModelAttrs::test_model_attrs[title-CharField-params0] <- tests\conftest.py PASSED [ 59%]
+tests/test_category_model.py::TestCategoryModelAttrs::test_model_attrs[description-TextField-params1] <- tests\conftest.py PASSED [ 60%]
+tests/test_category_model.py::TestCategoryModelAttrs::test_model_attrs[slug-SlugField-params2] <- tests\conftest.py PASSED [ 61%]
+tests/test_category_model.py::TestCategoryModelAttrs::test_model_attrs[is_published-BooleanField-params3] <- tests\conftest.py PASSED [ 62%]
+tests/test_category_model.py::TestCategoryModelAttrs::test_model_attrs[created_at-DateTimeField-params4] <- tests\conftest.py PASSED [ 63%]
+tests/test_comment.py::TestCommentModelAttrs::test_model_attrs[`post` field] <- tests\conftest.py PASSED [ 64%]
+tests/test_comment.py::TestCommentModelAttrs::test_model_attrs[`author` field] <- tests\conftest.py PASSED [ 65%]
+tests/test_comment.py::TestCommentModelAttrs::test_model_attrs[`text` field] <- tests\conftest.py PASSED [ 66%]
+tests/test_comment.py::TestCommentModelAttrs::test_model_attrs[`created_at` field] <- tests\conftest.py PASSED [ 67%]
+tests/test_emails.py::test_gitignore <- ..\tests\test_emails.py PASSED   [ 68%]
+tests/test_emails.py::test_email_backend_settings <- ..\tests\test_emails.py PASSED [ 69%]
+tests/test_err_pages.py::test_csrf_failure_view <- ..\tests\test_err_pages.py PASSED [ 70%]
+tests/test_localization.py::test_rus_localization <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 71%]
+tests/test_localization.py::test_blog_in_rus <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 71%]
+tests/test_localization.py::test_models_translated[Category-\u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f-\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 72%]
+tests/test_localization.py::test_models_translated[Location-\u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435-\u041c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 73%]
+tests/test_localization.py::test_models_translated[Post-\u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u044f-\u041f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 74%]
+tests/test_localization.py::test_models_params_translate[Category-is_published-\u041e\u043f\u0443\u0431\u043b\u0438\u043a\u043e\u0432\u0430\u043d\u043e] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 75%]
+tests/test_localization.py::test_models_params_translate[Category-title-\u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 76%]
+tests/test_localization.py::test_models_params_translate[Category-slug-\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 77%]
+tests/test_localization.py::test_models_params_translate[Category-description-\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 78%]
+tests/test_localization.py::test_models_params_translate[Category-created_at-\u0414\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u043e] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 79%]
+tests/test_localization.py::test_models_params_translate[Location-name-\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043c\u0435\u0441\u0442\u0430] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 80%]
+tests/test_localization.py::test_models_params_translate[Location-created_at-\u0414\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u043e] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 81%]
+tests/test_localization.py::test_models_params_translate[Location-is_published-\u041e\u043f\u0443\u0431\u043b\u0438\u043a\u043e\u0432\u0430\u043d\u043e] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 82%]
+tests/test_localization.py::test_models_params_translate[Post-pub_date-\u0414\u0430\u0442\u0430 \u0438 \u0432\u0440\u0435\u043c\u044f \u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 83%]
+tests/test_localization.py::test_models_params_translate[Post-text-\u0422\u0435\u043a\u0441\u0442] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 84%]
+tests/test_localization.py::test_models_params_translate[Post-author-\u0410\u0432\u0442\u043e\u0440 \u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 85%]
+tests/test_localization.py::test_models_params_translate[Post-category-\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 85%]
+tests/test_localization.py::test_models_params_translate[Post-location-\u041c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 86%]
+tests/test_localization.py::test_models_params_translate[Post-created_at-\u0414\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u043e] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 87%]
+tests/test_localization.py::test_models_params_translate[Post-is_published-\u041e\u043f\u0443\u0431\u043b\u0438\u043a\u043e\u0432\u0430\u043d\u043e] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 88%]
+tests/test_localization.py::test_help_text_translate[Category-is_published-\u0421\u043d\u0438\u043c\u0438\u0442\u0435 \u0433\u0430\u043b\u043e\u0447\u043a\u0443, \u0447\u0442\u043e\u0431\u044b \u0441\u043a\u0440\u044b\u0442\u044c \u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u044e.] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 89%]
+tests/test_localization.py::test_help_text_translate[Category-slug-\u0418\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b \u0434\u043b\u044f URL; \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u044b \u0441\u0438\u043c\u0432\u043e\u043b\u044b \u043b\u0430\u0442\u0438\u043d\u0438\u0446\u044b, \u0446\u0438\u0444\u0440\u044b, \u0434\u0435\u0444\u0438\u0441 \u0438 \u043f\u043e\u0434\u0447\u0451\u0440\u043a\u0438\u0432\u0430\u043d\u0438\u0435.] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 90%]
+tests/test_localization.py::test_help_text_translate[Post-pub_date-\u0415\u0441\u043b\u0438 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0434\u0430\u0442\u0443 \u0438 \u0432\u0440\u0435\u043c\u044f \u0432 \u0431\u0443\u0434\u0443\u0449\u0435\u043c \u2014 \u043c\u043e\u0436\u043d\u043e \u0434\u0435\u043b\u0430\u0442\u044c \u043e\u0442\u043b\u043e\u0436\u0435\u043d\u043d\u044b\u0435 \u043f\u0443\u0431\u043b\u0438\u043a\u0430\u0446\u0438\u0438.] <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_localization.py PASSED [ 91%]
+tests/test_location_model.py::TestLocationModelAttrs::test_model_attrs[name-CharField-params0] <- tests\conftest.py PASSED [ 92%]
+tests/test_location_model.py::TestLocationModelAttrs::test_model_attrs[is_published-BooleanField-params1] <- tests\conftest.py PASSED [ 93%]
+tests/test_location_model.py::TestLocationModelAttrs::test_model_attrs[created_at-DateTimeField-params2] <- tests\conftest.py PASSED [ 94%]
+tests/test_post.py::TestPostModelAttrs::test_model_attrs[`image` field] <- tests\conftest.py PASSED [ 95%]
+tests/test_post.py::TestPostModelAttrs::test_model_attrs[`pub_date` field] <- tests\conftest.py PASSED [ 96%]
+tests/test_static_pages.py::test_static_pages_as_cbv <- ..\tests\test_static_pages.py PASSED [ 97%]
+tests/test_urls.py::test_blog_urls <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_urls.py PASSED [ 98%]
+tests/test_urls.py::test_pages_urls <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_urls.py PASSED [ 99%]
+tests/test_urls.py::test_blogicum_urls <- ..\..\..\Yandex\sprint3\django_sprint3\tests\test_urls.py PASSED [100%]
+
+================================== FAILURES ===================================
+_____________________________ test_category_page ______________________________
+
+user_client = <django.test.client.Client object at 0x0000023D6FCDE780>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+category_page_post_list_context_key = 'post_list'
+
+    def test_category_page(
+            user_client, posts_with_published_locations,
+            category_page_post_list_context_key):
+        category = posts_with_published_locations[0].category
+
+        def get_category_posts():
+            response = user_client.get(f'/category/{category.slug}/')
+            return response.context.get(category_page_post_list_context_key)
+
+        context_post_list = get_category_posts()
+>       assert len(context_post_list) == len(
+            posts_with_published_locations), (
+            'Убедитесь, что при обращении к странице `/category/<slug:slug>/` в '
+            'словаре контекста под ключом '
+            f'`{category_page_post_list_context_key}` '
+            'передаются все не снятые с публикации записи, принадлежащие этой '
+            'категории.'
+        )
+E       TypeError: object of type 'NoneType' has no len()
+
+C:\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py:20: TypeError
+________________ test_category_page_check_context_keys[title] _________________
+
+key = 'title'
+user_client = <django.test.client.Client object at 0x0000023D6FE47FE0>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+published_category = <Category: Опубликованная категория>
+category_page_post_list_context_key = 'post_list'
+
+    @pytest.mark.parametrize('key', [
+        'title',
+        ('category', 'title'),
+        ('category', 'slug'),
+        ('location', 'name')
+    ])
+    def test_category_page_check_context_keys(
+            key, user_client, posts_with_published_locations,
+            published_category, category_page_post_list_context_key
+    ):
+        response = user_client.get(f'/category/{published_category.slug}/')
+        context_post_list = response.context.get(
+            category_page_post_list_context_key)
+        html = response.content.decode('utf-8')
+        if isinstance(key, tuple):
+            key_1, key_2 = key
+            assert getattr(
+                getattr(context_post_list[0], key_1), key_2) in html, (
+                'На странице категории '
+                f'не использовано значение атрибута `{key_1}.{key_2}`.'
+            )
+        else:
+>           assert getattr(context_post_list[0], key) in html, (
+                'На странице категории '
+                f'не использовано значение атрибута публикаций `{key}`.'
+            )
+E           TypeError: 'NoneType' object is not subscriptable
+
+C:\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py:60: TypeError
+_________________ test_category_page_check_context_keys[key1] _________________
+
+key = ('category', 'title')
+user_client = <django.test.client.Client object at 0x0000023D6FED1040>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+published_category = <Category: Опубликованная категория>
+category_page_post_list_context_key = 'post_list'
+
+    @pytest.mark.parametrize('key', [
+        'title',
+        ('category', 'title'),
+        ('category', 'slug'),
+        ('location', 'name')
+    ])
+    def test_category_page_check_context_keys(
+            key, user_client, posts_with_published_locations,
+            published_category, category_page_post_list_context_key
+    ):
+        response = user_client.get(f'/category/{published_category.slug}/')
+        context_post_list = response.context.get(
+            category_page_post_list_context_key)
+        html = response.content.decode('utf-8')
+        if isinstance(key, tuple):
+            key_1, key_2 = key
+>           assert getattr(
+                getattr(context_post_list[0], key_1), key_2) in html, (
+                'На странице категории '
+                f'не использовано значение атрибута `{key_1}.{key_2}`.'
+            )
+E           TypeError: 'NoneType' object is not subscriptable
+
+C:\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py:54: TypeError
+_________________ test_category_page_check_context_keys[key2] _________________
+
+key = ('category', 'slug')
+user_client = <django.test.client.Client object at 0x0000023D6FCF1E20>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+published_category = <Category: Опубликованная категория>
+category_page_post_list_context_key = 'post_list'
+
+    @pytest.mark.parametrize('key', [
+        'title',
+        ('category', 'title'),
+        ('category', 'slug'),
+        ('location', 'name')
+    ])
+    def test_category_page_check_context_keys(
+            key, user_client, posts_with_published_locations,
+            published_category, category_page_post_list_context_key
+    ):
+        response = user_client.get(f'/category/{published_category.slug}/')
+        context_post_list = response.context.get(
+            category_page_post_list_context_key)
+        html = response.content.decode('utf-8')
+        if isinstance(key, tuple):
+            key_1, key_2 = key
+>           assert getattr(
+                getattr(context_post_list[0], key_1), key_2) in html, (
+                'На странице категории '
+                f'не использовано значение атрибута `{key_1}.{key_2}`.'
+            )
+E           TypeError: 'NoneType' object is not subscriptable
+
+C:\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py:54: TypeError
+_________________ test_category_page_check_context_keys[key3] _________________
+
+key = ('location', 'name')
+user_client = <django.test.client.Client object at 0x0000023D6FCBBFE0>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+published_category = <Category: Опубликованная категория>
+category_page_post_list_context_key = 'post_list'
+
+    @pytest.mark.parametrize('key', [
+        'title',
+        ('category', 'title'),
+        ('category', 'slug'),
+        ('location', 'name')
+    ])
+    def test_category_page_check_context_keys(
+            key, user_client, posts_with_published_locations,
+            published_category, category_page_post_list_context_key
+    ):
+        response = user_client.get(f'/category/{published_category.slug}/')
+        context_post_list = response.context.get(
+            category_page_post_list_context_key)
+        html = response.content.decode('utf-8')
+        if isinstance(key, tuple):
+            key_1, key_2 = key
+>           assert getattr(
+                getattr(context_post_list[0], key_1), key_2) in html, (
+                'На странице категории '
+                f'не использовано значение атрибута `{key_1}.{key_2}`.'
+            )
+E           TypeError: 'NoneType' object is not subscriptable
+
+C:\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py:54: TypeError
+____________________ test_category_page_posts_unpublished _____________________
+
+user_client = <django.test.client.Client object at 0x0000023D6FDFA960>
+unpublished_posts_with_published_locations = [<Post: Неопубликованный пост 0>, <Post: Неопубликованный пост 1>, <Post: Неопубликованный пост 2>]
+category_page_post_list_context_key = 'post_list'
+
+    def test_category_page_posts_unpublished(
+            user_client, unpublished_posts_with_published_locations,
+            category_page_post_list_context_key
+    ):
+        category_slug = unpublished_posts_with_published_locations[0].category.slug
+        response = user_client.get(f'/category/{category_slug}/')
+        if response.status_code == HTTPStatus.OK:
+            context_post_list = response.context.get(
+                category_page_post_list_context_key)
+>           assert len(context_post_list) == 0, (
+                'Убедитесь, что когда в категории нет опубликованных постов, '
+                'они не передаются в контекст её страницы.'
+            )
+E           TypeError: object of type 'NoneType' has no len()
+
+C:\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py:87: TypeError
+___________________ test_category_page_pub_date_later_today ___________________
+
+user_client = <django.test.client.Client object at 0x0000023D6EBF4590>
+posts_with_future_date = [<Post: Пост 0 из будущего>, <Post: Пост 1 из будущего>, <Post: Пост 2 из будущего>]
+category_page_post_list_context_key = 'post_list'
+
+    def test_category_page_pub_date_later_today(
+            user_client,
+            posts_with_future_date,
+            category_page_post_list_context_key
+    ):
+        if not posts_with_future_date[0].category:
+            raise AssertionError(
+                'В модели `Post` в атрибуте `category` '
+                'проверьте значение параметра `blank` на соответствие заданию.')
+        category_slug = posts_with_future_date[0].category.slug
+        response = user_client.get(f'/category/{category_slug}/')
+        if response.status_code == HTTPStatus.OK:
+            context_post_list = response.context.get(
+                category_page_post_list_context_key)
+>           assert len(context_post_list) == 0, (
+                'Убедитесь, что на странице категории '
+                'не выводятся записи с датой публикации в будущем.'
+            )
+E           TypeError: object of type 'NoneType' has no len()
+
+C:\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py:107: TypeError
+___________________ test_category_page_posts_with_location ____________________
+
+user_client = <django.test.client.Client object at 0x0000023D6FF09070>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+category_page_post_list_context_key = 'post_list'
+
+    def test_category_page_posts_with_location(
+            user_client, posts_with_published_locations,
+            category_page_post_list_context_key
+    ):
+        category = posts_with_published_locations[0].category
+        response = user_client.get(f'/category/{category.slug}/')
+        context_post_list = response.context.get(
+            category_page_post_list_context_key)
+>       assert all(x.location for x in context_post_list), (
+            'Убедитесь, что на странице категории '
+            'в объектах постов, отмеченных опубликованной географической '
+            'меткой, передаётся ключ `location` и его значение.'
+        )
+E       TypeError: 'NoneType' object is not iterable
+
+C:\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py:121: TypeError
+_____________ test_category_page_posts_with_unpublished_locations _____________
+
+user_client = <django.test.client.Client object at 0x0000023D6E8ECD70>
+posts_with_unpublished_locations = [<Post: Пост 0 с неопубликованной локацией>, <Post: Пост 1 с неопубликованной локацией>, <Post: Пост 2 с неопубликованной локацией>]
+category_page_post_list_context_key = 'post_list'
+
+    def test_category_page_posts_with_unpublished_locations(
+            user_client,
+            posts_with_unpublished_locations, category_page_post_list_context_key
+    ):
+        category = posts_with_unpublished_locations[0].category
+        response = user_client.get(f'/category/{category.slug}/')
+        context_post_list = response.context.get(
+            category_page_post_list_context_key)
+>       assert len(context_post_list) == len(posts_with_unpublished_locations), (
+            ' Убедитесь, что в словарь контекста страницы категории '
+            'попадают и те записи этой категории, '
+            'географическая метка которых снята с публикации.'
+        )
+E       TypeError: object of type 'NoneType' has no len()
+
+C:\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py:136: TypeError
+______________________ test_many_posts_on_category_page _______________________
+
+user_client = <django.test.client.Client object at 0x0000023D6FEA5280>
+many_posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>, <Post: Пост 3>, <Post: Пост 4>, <Post: Пост 5>, ...]
+category_page_post_list_context_key = 'post_list'
+
+    def test_many_posts_on_category_page(
+            user_client, many_posts_with_published_locations,
+            category_page_post_list_context_key):
+        category = many_posts_with_published_locations[0].category
+        response = user_client.get(f'/category/{category.slug}/')
+        context_post_list = response.context.get(
+            category_page_post_list_context_key)
+>       assert len(context_post_list) == len(
+            many_posts_with_published_locations), (
+            'Убедитесь, что на странице категории '
+            'отображаются все относящиеся к ней опубликованные посты.'
+        )
+E       TypeError: object of type 'NoneType' has no len()
+
+C:\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py:150: TypeError
+____________________ test_no_other_posts_on_category_page _____________________
+
+user_client = <django.test.client.Client object at 0x0000023D6FF2E780>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+posts_with_unpublished_category = [<Post: Пост 0 с неопубликованной категорией>, <Post: Пост 1 с неопубликованной категорией>, <Post: Пост 2 с неопубликованной категорией>]
+posts_with_published_locations_from_another_published_category = [<Post: Пост из другой категории 0>, <Post: Пост из другой категории 1>, <Post: Пост из другой категории 2>]
+category_page_post_list_context_key = 'post_list'
+
+    def test_no_other_posts_on_category_page(
+            user_client, posts_with_published_locations,
+            posts_with_unpublished_category,
+            posts_with_published_locations_from_another_published_category,
+            category_page_post_list_context_key):
+        category = posts_with_published_locations[0].category
+        response = user_client.get(f'/category/{category.slug}/')
+        context_post_list = response.context.get(
+            category_page_post_list_context_key)
+>       assert len(context_post_list) == len(
+            posts_with_published_locations), (
+            'Убедитесь, что на странице категории '
+            'отображаются опубликованные посты, относящиеся исключительно к этой '
+            'категории.'
+        )
+E       TypeError: object of type 'NoneType' has no len()
+
+C:\Yandex\sprint3\django_sprint3\tests\test_category_page_views.py:166: TypeError
+____________________ TestContent.test_unpublished_category ____________________
+
+self = <test_content.TestContent object at 0x0000023D6EAE0200>
+user_client = <django.test.client.Client object at 0x0000023D6FF8EBA0>
+posts_with_unpublished_category = [<Post: Пост 0 с неопубликованной категорией>, <Post: Пост 1 с неопубликованной категорией>, <Post: Пост 2 с неопубликованной категорией>]
+
+>   ???
+E   AssertionError: Убедитесь, что на странице пользователя автор может видеть свои посты, принадлежащие категории, снятой с публикации.
+E   assert 0 == 3
+E    +  where 0 = len(<Page 1 of 1>)
+
+C:\Dev\django_sprint4\tests\test_content.py:418: AssertionError
+_______________________ TestContent.test_image_visible ________________________
+
+self = <test_content.TestContent object at 0x0000023D6EAE1280>
+user_client = <django.test.client.Client object at 0x0000023D6FFAE0C0>
+post_with_published_location = <Post: Тестовый пост>
+
+>   ???
+E   AssertionError: Убедитесь, что на странице профиля автора отображаются изображения публикаций.
+E   assert (1 - 1) == 1
+
+C:\Dev\django_sprint4\tests\test_content.py:576: AssertionError
+_____________________ test_posts_page_pk_unpublished_post _____________________
+
+user_client = <django.test.client.Client object at 0x0000023D700BBBF0>
+unpublished_post = <Post: Неопубликованный пост>
+
+    def test_posts_page_pk_unpublished_post(user_client, unpublished_post):
+        response = user_client.get(f'/posts/{unpublished_post.id}/')
+>       assert response.status_code == HTTPStatus.NOT_FOUND, (
+            'Убедитесь, что страница поста, снятого с публикации, '
+            'возвращает статус 404.'
+        )
+E       AssertionError: Убедитесь, что страница поста, снятого с публикации, возвращает статус 404.
+E       assert 200 == <HTTPStatus.NOT_FOUND: 404>
+E        +  where 200 = <HttpResponse status_code=200, "text/html; charset=utf-8">.status_code
+E        +  and   <HTTPStatus.NOT_FOUND: 404> = HTTPStatus.NOT_FOUND
+
+C:\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py:93: AssertionError
+___________________ test_posts_page_pk_pub_date_later_today ___________________
+
+user_client = <django.test.client.Client object at 0x0000023D700C9100>
+post_with_future_date = <Post: Пост из будущего>
+
+    def test_posts_page_pk_pub_date_later_today(
+            user_client, post_with_future_date):
+        response = user_client.get(f'/posts/{post_with_future_date.id}/')
+>       assert response.status_code == HTTPStatus.NOT_FOUND, (
+            'Убедитесь, что если для поста дата публикации установлена в будущем, '
+            'отдельная страница такого поста возвращает статус 404.'
+        )
+E       AssertionError: Убедитесь, что если для поста дата публикации установлена в будущем, отдельная страница такого поста возвращает статус 404.
+E       assert 200 == <HTTPStatus.NOT_FOUND: 404>
+E        +  where 200 = <HttpResponse status_code=200, "text/html; charset=utf-8">.status_code
+E        +  and   <HTTPStatus.NOT_FOUND: 404> = HTTPStatus.NOT_FOUND
+
+C:\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py:102: AssertionError
+___________________ test_posts_page_pk_category_unpublished ___________________
+
+user_client = <django.test.client.Client object at 0x0000023D700B9F40>
+post_with_unpublished_category = <Post: Пост с неопубликованной категорией>
+
+    def test_posts_page_pk_category_unpublished(
+            user_client,
+            post_with_unpublished_category,
+    ):
+        response = user_client.get(f'/posts/{post_with_unpublished_category.id}/')
+>       assert response.status_code == HTTPStatus.NOT_FOUND, (
+            'Убедитесь, что если посту присвоена категория, снятая с публикации, '
+            'то отдельная страница этого поста возвращает статус 404.'
+        )
+E       AssertionError: Убедитесь, что если посту присвоена категория, снятая с публикации, то отдельная страница этого поста возвращает статус 404.
+E       assert 200 == <HTTPStatus.NOT_FOUND: 404>
+E        +  where 200 = <HttpResponse status_code=200, "text/html; charset=utf-8">.status_code
+E        +  and   <HTTPStatus.NOT_FOUND: 404> = HTTPStatus.NOT_FOUND
+
+C:\Yandex\sprint3\django_sprint3\tests\test_post_detail_views.py:113: AssertionError
+______ TestPostModelAttrs.test_model_attrs[category-ForeignKey-params5] _______
+
+self = <test_post_model.TestPostModelAttrs object at 0x0000023D6EB27B60>
+field = 'category', type = <class 'django.db.models.fields.related.ForeignKey'>
+params = {'blank': False, 'null': True}
+field_error = 'В модели `Post` укажите атрибут `category`.'
+type_error = "В модели `Post` у атрибута `category` укажите тип `<class 'django.db.models.fields.related.ForeignKey'>`."
+param_error = 'В модели `Post` для атрибута `category` укажите параметр `null`.'
+value_error = 'В модели `Post` в атрибуте `category` проверьте значение параметра `null` на соответствие заданию.'
+
+    def test_model_attrs(
+            self, field: str, type: type, params: dict,
+            field_error: Optional[str], type_error: Optional[str],
+            param_error: Optional[str], value_error: Optional[str]):
+        model_name = self.model.__name__
+        field_error = field_error or (
+            f"В модели `{model_name}` укажите атрибут `{field}`.")
+        assert hasattr(self.model, field), field_error
+
+        model_field = getattr(self.model, field).field
+        type_error = type_error or (
+            f"В модели `{model_name}` у атрибута `{field}` "
+            f"укажите тип `{type}`."
+        )
+        assert isinstance(model_field, type), type_error
+
+        for param, value_param in params.items():
+            display_name = self.get_parameter_display_name(param)
+            param_error = param_error or (
+                f"В модели `{model_name}` для атрибута `{field}` "
+                f"укажите параметр `{display_name}`."
+            )
+            assert param in model_field.__dict__, param_error
+
+            value_error = value_error or (
+                f"В модели `{model_name}` в атрибуте `{field}` "
+                f"проверьте значение параметра `{display_name}` "
+                "на соответствие заданию."
+            )
+>           assert model_field.__dict__.get(param) == value_param, value_error
+E           AssertionError: В модели `Post` в атрибуте `category` проверьте значение параметра `null` на соответствие заданию.
+E           assert True == False
+E            +  where True = <built-in method get of dict object at 0x0000023D6B495EC0>('blank')
+E            +    where <built-in method get of dict object at 0x0000023D6B495EC0> = {'_db_tablespace': None, '_error_messages': None, '_get_default': <function return_None at 0x0000023D6DDABEC0>, '_unique': False, ...}.get
+E            +      where {'_db_tablespace': None, '_error_messages': None, '_get_default': <function return_None at 0x0000023D6DDABEC0>, '_unique': False, ...} = <django.db.models.fields.related.ForeignKey: category>.__dict__
+
+tests\conftest.py:199: AssertionError
+____________________________ test_all_unpublished _____________________________
+
+user_client = <django.test.client.Client object at 0x0000023D70070AD0>
+unpublished_posts_with_published_locations = [<Post: Неопубликованный пост 0>, <Post: Неопубликованный пост 1>, <Post: Неопубликованный пост 2>]
+main_page_post_list_context_key = 'post_list'
+
+    def test_all_unpublished(
+            user_client, unpublished_posts_with_published_locations,
+            main_page_post_list_context_key):
+        response = user_client.get('/')
+        context_post_list = response.context.get(main_page_post_list_context_key)
+>       assert len(context_post_list) == 0, (
+            'Убедитесь, что если в проекте нет ни одного опубликованного поста - '
+            'то на главной странице нет записей.'
+        )
+E       TypeError: object of type 'NoneType' has no len()
+
+C:\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py:15: TypeError
+____________________________ test_mixed_published _____________________________
+
+user_client = <django.test.client.Client object at 0x0000023D700476E0>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+unpublished_posts_with_published_locations = [<Post: Неопубликованный пост 0>, <Post: Неопубликованный пост 1>, <Post: Неопубликованный пост 2>]
+main_page_post_list_context_key = 'post_list'
+
+    def test_mixed_published(
+            user_client, posts_with_published_locations,
+            unpublished_posts_with_published_locations,
+            main_page_post_list_context_key
+    ):
+        response = user_client.get('/')
+        context_post_list = response.context.get(main_page_post_list_context_key)
+        n_expected = len(posts_with_published_locations)
+>       assert len(context_post_list) == n_expected, (
+            'Убедитесь, что при обращении к главной странице в словарь контекста '
+            f'под ключом `{main_page_post_list_context_key}` передаются только '
+            'опубликованные записи с опубликованной категорией '
+            'и датой публикации в прошлом.'
+        )
+E       TypeError: object of type 'NoneType' has no len()
+
+C:\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py:29: TypeError
+_______________________ test_check_context_keys[title] ________________________
+
+key = 'title'
+user_client = <django.test.client.Client object at 0x0000023D6FF899D0>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+main_page_post_list_context_key = 'post_list'
+
+    @pytest.mark.parametrize('key', [
+        'title',
+        ('category', 'title'),
+        ('category', 'slug'),
+        ('location', 'name')
+    ])
+    def test_check_context_keys(
+            key,
+            user_client,
+            posts_with_published_locations, main_page_post_list_context_key):
+        response = user_client.get('/')
+        context_post_list = response.context.get(main_page_post_list_context_key)
+        html = response.content.decode('utf-8')
+        if isinstance(key, tuple):
+            key_1, key_2 = key
+            assert getattr(getattr(context_post_list[0], key_1), key_2) in html, (
+                'На главной странице '
+                f'не использовано значение атрибута `{key_1}.{key_2}`.'
+            )
+        else:
+>           assert getattr(context_post_list[0], key) in html, (
+                'На главной странице '
+                f'не использовано значение атрибута публикаций `{key}`.'
+            )
+E           TypeError: 'NoneType' object is not subscriptable
+
+C:\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py:62: TypeError
+________________________ test_check_context_keys[key1] ________________________
+
+key = ('category', 'title')
+user_client = <django.test.client.Client object at 0x0000023D700BA540>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+main_page_post_list_context_key = 'post_list'
+
+    @pytest.mark.parametrize('key', [
+        'title',
+        ('category', 'title'),
+        ('category', 'slug'),
+        ('location', 'name')
+    ])
+    def test_check_context_keys(
+            key,
+            user_client,
+            posts_with_published_locations, main_page_post_list_context_key):
+        response = user_client.get('/')
+        context_post_list = response.context.get(main_page_post_list_context_key)
+        html = response.content.decode('utf-8')
+        if isinstance(key, tuple):
+            key_1, key_2 = key
+>           assert getattr(getattr(context_post_list[0], key_1), key_2) in html, (
+                'На главной странице '
+                f'не использовано значение атрибута `{key_1}.{key_2}`.'
+            )
+E           TypeError: 'NoneType' object is not subscriptable
+
+C:\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py:57: TypeError
+________________________ test_check_context_keys[key2] ________________________
+
+key = ('category', 'slug')
+user_client = <django.test.client.Client object at 0x0000023D700AA8A0>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+main_page_post_list_context_key = 'post_list'
+
+    @pytest.mark.parametrize('key', [
+        'title',
+        ('category', 'title'),
+        ('category', 'slug'),
+        ('location', 'name')
+    ])
+    def test_check_context_keys(
+            key,
+            user_client,
+            posts_with_published_locations, main_page_post_list_context_key):
+        response = user_client.get('/')
+        context_post_list = response.context.get(main_page_post_list_context_key)
+        html = response.content.decode('utf-8')
+        if isinstance(key, tuple):
+            key_1, key_2 = key
+>           assert getattr(getattr(context_post_list[0], key_1), key_2) in html, (
+                'На главной странице '
+                f'не использовано значение атрибута `{key_1}.{key_2}`.'
+            )
+E           TypeError: 'NoneType' object is not subscriptable
+
+C:\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py:57: TypeError
+________________________ test_check_context_keys[key3] ________________________
+
+key = ('location', 'name')
+user_client = <django.test.client.Client object at 0x0000023D700F9E80>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+main_page_post_list_context_key = 'post_list'
+
+    @pytest.mark.parametrize('key', [
+        'title',
+        ('category', 'title'),
+        ('category', 'slug'),
+        ('location', 'name')
+    ])
+    def test_check_context_keys(
+            key,
+            user_client,
+            posts_with_published_locations, main_page_post_list_context_key):
+        response = user_client.get('/')
+        context_post_list = response.context.get(main_page_post_list_context_key)
+        html = response.content.decode('utf-8')
+        if isinstance(key, tuple):
+            key_1, key_2 = key
+>           assert getattr(getattr(context_post_list[0], key_1), key_2) in html, (
+                'На главной странице '
+                f'не использовано значение атрибута `{key_1}.{key_2}`.'
+            )
+E           TypeError: 'NoneType' object is not subscriptable
+
+C:\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py:57: TypeError
+__________________________ test_category_unpublished __________________________
+
+user_client = <django.test.client.Client object at 0x0000023D6FEEC980>
+posts_with_unpublished_category = [<Post: Пост 0 с неопубликованной категорией>, <Post: Пост 1 с неопубликованной категорией>, <Post: Пост 2 с неопубликованной категорией>]
+main_page_post_list_context_key = 'post_list'
+
+    def test_category_unpublished(
+            user_client, posts_with_unpublished_category,
+            main_page_post_list_context_key):
+        response = user_client.get('/')
+        context_post_list = response.context.get(main_page_post_list_context_key)
+>       assert len(context_post_list) == 0, (
+            'Если категория снята с публикации, '
+            'то на главной странице не должны отображаться '
+            'относящиеся к ней посты.'
+        )
+E       TypeError: object of type 'NoneType' has no len()
+
+C:\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py:73: TypeError
+__________________________ test_pub_date_later_today __________________________
+
+user_client = <django.test.client.Client object at 0x0000023D6FF5E840>
+posts_with_future_date = [<Post: Пост 0 из будущего>, <Post: Пост 1 из будущего>, <Post: Пост 2 из будущего>]
+main_page_post_list_context_key = 'post_list'
+
+    def test_pub_date_later_today(
+            user_client, posts_with_future_date, main_page_post_list_context_key):
+        response = user_client.get('/')
+        context_post_list = response.context.get(main_page_post_list_context_key)
+>       assert len(context_post_list) == 0, (
+            'Если дата публикации поста позже текущего времени, '
+            'он не должен отображаться на главной странице.'
+        )
+E       TypeError: object of type 'NoneType' has no len()
+
+C:\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py:84: TypeError
+_____________________ test_posts_with_published_location ______________________
+
+user_client = <django.test.client.Client object at 0x0000023D70058650>
+posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>]
+main_page_post_list_context_key = 'post_list'
+
+    def test_posts_with_published_location(
+            user_client, posts_with_published_locations,
+            main_page_post_list_context_key
+    ):
+        response = user_client.get('/')
+        context_post_list = response.context.get(main_page_post_list_context_key)
+>       assert all(x.location for x in context_post_list), (
+            'Убедитесь, что в словаре контекста для главной страницы '
+            'в объектах постов, '
+            'отмеченных географической меткой, '
+            'передаётся ключ `location` и значение этого ключа.'
+        )
+E       TypeError: 'NoneType' object is not iterable
+
+C:\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py:96: TypeError
+____________________ test_posts_with_unpublished_locations ____________________
+
+user_client = <django.test.client.Client object at 0x0000023D70194E30>
+posts_with_unpublished_locations = [<Post: Пост 0 с неопубликованной локацией>, <Post: Пост 1 с неопубликованной локацией>, <Post: Пост 2 с неопубликованной локацией>]
+main_page_post_list_context_key = 'post_list'
+
+    def test_posts_with_unpublished_locations(
+            user_client,
+            posts_with_unpublished_locations, main_page_post_list_context_key):
+        response = user_client.get('/')
+        context_post_list = response.context.get(main_page_post_list_context_key)
+>       assert len(context_post_list) == N_TEST_POSTS, (
+            ' Убедитесь, что в словарь контекста главной страницы '
+            'попадают даже те записи, '
+            'географическая метка которых не опубликована.'
+        )
+E       TypeError: object of type 'NoneType' has no len()
+
+C:\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py:109: TypeError
+________________________ test_many_posts_on_main_page _________________________
+
+user_client = <django.test.client.Client object at 0x0000023D7007EE40>
+many_posts_with_published_locations = [<Post: Пост 0>, <Post: Пост 1>, <Post: Пост 2>, <Post: Пост 3>, <Post: Пост 4>, <Post: Пост 5>, ...]
+main_page_post_list_context_key = 'post_list'
+
+    def test_many_posts_on_main_page(
+            user_client, many_posts_with_published_locations,
+            main_page_post_list_context_key):
+        response = user_client.get('/')
+        context_post_list = response.context.get(main_page_post_list_context_key)
+>       assert len(context_post_list) == N_POSTS_LIMIT, (
+            'Убедитесь, что на главной странице '
+            f'отображается только {N_POSTS_LIMIT} последних публикаций.'
+        )
+E       TypeError: object of type 'NoneType' has no len()
+
+C:\Yandex\sprint3\django_sprint3\tests\test_posts_page_views.py:121: TypeError
+________________________________ test_profile _________________________________
+
+user = <User: rkaiser>, another_user = <User: roy84>
+user_client = <django.test.client.Client object at 0x0000023D6FF81D60>
+another_user_client = <django.test.client.Client object at 0x0000023D701A4A10>
+unlogged_client = <django.test.client.Client object at 0x0000023D6FF81340>
+
+>   ???
+
+C:\Dev\django_sprint4\tests\test_users.py:135:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+profile_user = <User: rkaiser>
+profile_user_content = '\n\n<!DOCTYPE html>\n<html lang="ru">\n  <head>\n    <meta charset="utf-8">\n    <meta name="viewport" content="width...n    </main>\n    <footer class="border-top text-center py-3">\n  <p>© Блогикум</p>    \n</footer>\n  </body>\n</html>'
+printed_url = '/profile/<username>/'
+
+>   ???
+E   AssertionError: Убедитесь, что на странице `/profile/<username>/` отображается имя пользователя.
+
+C:\Dev\django_sprint4\tests\test_users.py:182: AssertionError
+________________________________ test_comment _________________________________
+
+user_client = <django.test.client.Client object at 0x0000023D6FF800B0>
+another_user_client = <django.test.client.Client object at 0x0000023D701DBA10>
+unlogged_client = <django.test.client.Client object at 0x0000023D701DBEC0>
+post_with_published_location = <Post: Тестовый пост>
+another_user = <User: vaughnaaron>
+post_comment_context_form_item = KeyVal(key='form', val=<CommentForm bound=False, valid=Unknown, fields=(text)>)
+CommentModel = <class 'blog.models.Comment'>
+CommentModelAdapter = <class 'adapters.comment.CommentModelAdapter.<locals>._CommentModelAdapter'>
+profile_content_tester = <test_content.ProfilePostContentTester object at 0x0000023D701D9850>
+
+>   ???
+
+C:\Dev\django_sprint4\tests\test_comment.py:169:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+adapted_comments = [<adapters.comment.CommentModelAdapter.<locals>._CommentModelAdapter object at 0x0000023D6FE3C4A0>, <adapters.comment....0x0000023D6FF5D220>, <adapters.comment.CommentModelAdapter.<locals>._CommentModelAdapter object at 0x0000023D6FF5EA50>]
+post_page_response = <HttpResponse status_code=200, "text/html; charset=utf-8">
+urls_start_with = KeyVal(key='/posts/<post_id>/', val='/posts/2/')
+user_client = <django.test.client.Client object at 0x0000023D6FF800B0>
+
+    def find_edit_and_delete_urls(
+            adapted_comments: Sequence[CommentModelAdapterT],
+            post_page_response: HttpResponse,
+            urls_start_with: KeyVal,
+            user_client: django.test.Client,
+    ) -> Tuple[KeyVal, KeyVal]:
+        """Looks up two links in the post_page_response's content.
+        The links must be found between two adjacent comments to the post.
+        The link that leads to a page with a form in its template's context
+        is the one for editing the comment,
+        the other one, therefore, is for its deletion.
+        !!! Make sure each comment text in unique on the page.
+        """
+
+        post_page_content = post_page_response.content.decode("utf-8")
+        assert len(adapted_comments) >= 2
+
+        # Get info about html between two consecutive comments
+        pattern = re.compile(
+            rf"{adapted_comments[0].text}([\w\W]*?){adapted_comments[1].text}"
+        )
+        between_comments_match = pattern.search(post_page_content)
+        assert between_comments_match, (
+            "Убедитесь, что комментарии к публикациям отсортированы по времени их"
+            " публикации, «от старых к новым»."
+        )
+        text_between_comments = between_comments_match.group(1)
+        between_comments_start_lineix = post_page_content.count(
+            "\n", 0, between_comments_match.start()
+        )
+        between_comments_end_lineix = between_comments_start_lineix + (
+            between_comments_match.group().count("\n")
+        )
+
+        comment_links = find_links_between_lines(
+            post_page_content,
+            urls_start_with.val,
+            between_comments_start_lineix,
+            between_comments_end_lineix,
+            link_text_in=text_between_comments,
+        )
+        if len(set(link.get("href") for link in comment_links)) != 2:
+            raise AssertionError(
+                "Убедитесь, что на странице поста автору комментария доступны"
+                " ссылки для редактирования и удаления этого комментария. Ссылки"
+                " должны вести на разные страницы, адрес которых начинается с"
+                f" {urls_start_with.key}"
+            )
+
+        # We have two links. Which one of them is the edit link,
+        # and which - the delete link? Edit link must lead to a form.
+
+        edit_link, del_link = comment_links[0], comment_links[1]
+
+        def assert_comment_links_return_same_get_status(_comment_links):
+            get_request_status_codes = []
+            try:
+                for comment_link in _comment_links:
+                    get_request_status_codes.append(
+                        user_client.get(comment_link.get("href")).status_code
+                    )
+                return all(
+                    x == get_request_status_codes[0]
+                    for x in get_request_status_codes
+                )
+            except NoReverseMatch:
+                raise AssertionError(
+                    "Убедитесь, что в контекст шаблонов страниц удаления "
+                    "и редактирования комментария "
+                    "передаётся объект комментария."
+                )
+            except Exception:
+                return False
+
+>       assert assert_comment_links_return_same_get_status(comment_links), (
+            "Страницы удаления и редактирования комментария должны иметь"
+            " идентичные права доступа. Убедитесь, что GET-запрос к этим страницам"
+            " возвращает один и тот же статус и не удаляет комментарий."
+        )
+E       AssertionError: Страницы удаления и редактирования комментария должны иметь идентичные права доступа. Убедитесь, что GET-запрос к этим страницам возвращает один и тот же статус и не удаляет комментарий.
+
+tests\form\comment\find_urls.py:87: AssertionError
+================ 30 failed, 77 passed, 1046 warnings in 5.99s =================
+(venv)

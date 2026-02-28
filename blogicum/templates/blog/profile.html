@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Профиль пользователя {{ profile_user.username }}
+{% endblock %}
+
+{% block content %}
+  <h1 class="mb-5 text-center">Профиль пользователя {{ profile_user.username }}</h1>
+
+  <small>
+    <ul class="list-group list-group-horizontal justify-content-center mb-3">
+      <li class="list-group-item text-muted">
+        Имя пользователя: {% if profile_user.get_full_name %}{{ profile_user.get_full_name }}{% else %}не указано{% endif %}
+      </li>
+      <li class="list-group-item text-muted">
+        Регистрация: {{ profile_user.date_joined|date:"d.m.Y" }}
+      </li>
+      <li class="list-group-item text-muted">
+        Роль: {% if profile_user.is_staff %}Админ{% else %}Пользователь{% endif %}
+      </li>
+    </ul>
+
+    <ul class="list-group list-group-horizontal justify-content-center">
+      {% if user.is_authenticated and request.user == profile_user %}
+        <li class="list-group-item">
+          <a class="btn btn-sm btn-outline-primary" href="{% url 'blog:edit_profile' username=profile_user.username %}">
+            Редактировать профиль
+          </a>
+        </li>
+        <li class="list-group-item">
+          <a class="btn btn-sm btn-outline-secondary" href="{% url 'password_change' %}">
+            Изменить пароль
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </small>
+
+  <br>
+
+  <h3 class="mb-5 text-center">Публикации пользователя</h3>
+
+  {% for post in page_obj %}
+    <article class="mb-5">
+      {% include "includes/post_card.html" %}
+    </article>
+  {% empty %}
+    <p class="text-center">У пользователя пока нет публикаций.</p>
+  {% endfor %}
+
+  {% include "includes/paginator.html" %}
+{% endblock %}
