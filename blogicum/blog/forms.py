@@ -15,10 +15,17 @@ class PostForm(forms.ModelForm):
             'category',
             'location',
             'pub_date',
+            'is_published',
             'image',
         )
         widgets = {
-            'pub_date': forms.DateTimeInput(attrs={'type': 'datetime-local'})
+            'pub_date': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
+        }
+        labels = {
+            'is_published': 'Опубликовано',
+        }
+        help_texts = {
+            'is_published': 'Отметьте, чтобы опубликовать пост',
         }
 
 

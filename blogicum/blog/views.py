@@ -19,8 +19,14 @@ MAIN_PAGE_LIMIT = 5
 PROFILE_PAGE_LIMIT = 10
 
 
+def paginate_queryset(request, queryset, items_per_page):
+    paginator = Paginator(queryset, items_per_page)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return page_obj
+
+
 def get_published_posts():
-    """Базовый queryset для опубликованных постов."""
     return (
         Post.objects
         .select_related('category', 'location', 'author')
@@ -35,7 +41,6 @@ def get_published_posts():
 
 
 def index(request):
-    """Главная страница - только 5 последних постов, без пагинации."""
     post_list = get_published_posts()[:MAIN_PAGE_LIMIT]
 
     return render(request, 'blog/index.html', {
@@ -45,7 +50,6 @@ def index(request):
 
 
 def category_posts(request, category_slug):
-    """Страница категории - все посты категории, без пагинации."""
     category = get_object_or_404(
         Category,
         slug=category_slug,
@@ -62,14 +66,16 @@ def category_posts(request, category_slug):
 
 
 def post_detail(request, id):
-    """Детальная страница поста - строгая проверка для ВСЕХ."""
     post = get_object_or_404(
         Post.objects.select_related('category', 'location', 'author'),
         pk=id,
-        is_published=True,
-        pub_date__lte=timezone.now(),
-        category__is_published=True,
     )
+
+    if request.user != post.author:
+        if not (post.is_published and
+                post.pub_date <= timezone.now() and
+                post.category.is_published):
+            raise Http404("Пост не найден или не опубликован")
 
     comments = post.comments.select_related('author').all()
     form = CommentForm()
@@ -83,7 +89,6 @@ def post_detail(request, id):
 
 
 def profile(request, username):
-    """Страница профиля пользователя с пагинацией по 10 постов."""
     profile_user = get_object_or_404(User, username=username)
 
     if request.user == profile_user:
@@ -108,9 +113,7 @@ def profile(request, username):
             .order_by('-pub_date')
         )
 
-    paginator = Paginator(post_list, PROFILE_PAGE_LIMIT)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
+    page_obj = paginate_queryset(request, post_list, PROFILE_PAGE_LIMIT)
 
     return render(request, 'blog/profile.html', {
         'profile_user': profile_user,
@@ -121,7 +124,6 @@ def profile(request, username):
 
 @login_required
 def create_post(request):
-    """Создание нового поста."""
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
@@ -137,7 +139,6 @@ def create_post(request):
 
 @login_required
 def edit_post(request, id):
-    """Редактирование поста."""
     post = get_object_or_404(Post, pk=id)
 
     if request.user != post.author:
@@ -155,7 +156,6 @@ def edit_post(request, id):
 
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    """Удаление поста."""
     model = Post
     template_name = 'blog/create.html'
     pk_url_kwarg = 'id'
@@ -177,7 +177,6 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 @login_required
 def add_comment(request, id):
-    """Добавление комментария."""
     post = get_object_or_404(Post, pk=id)
 
     if request.method == 'POST':
@@ -193,7 +192,6 @@ def add_comment(request, id):
 
 @login_required
 def edit_comment(request, id, comment_id):
-    """Редактирование комментария."""
     comment = get_object_or_404(Comment, pk=comment_id, post_id=id)
 
     if request.user != comment.author:
@@ -215,7 +213,6 @@ def edit_comment(request, id, comment_id):
 
 @login_required
 def delete_comment(request, id, comment_id):
-    """Удаление комментария."""
     comment = get_object_or_404(Comment, pk=comment_id, post_id=id)
 
     if request.user != comment.author:
@@ -232,7 +229,6 @@ def delete_comment(request, id, comment_id):
 
 @login_required
 def edit_profile(request, username):
-    """Редактирование профиля."""
     if request.user.username != username:
         return redirect('blog:profile', username=username)
 
@@ -250,7 +246,6 @@ def edit_profile(request, username):
 
 
 class RegistrationView(CreateView):
-    """Регистрация пользователя."""
     form_class = RegistrationForm
     template_name = 'registration/registration_form.html'
     success_url = reverse_lazy('login')
